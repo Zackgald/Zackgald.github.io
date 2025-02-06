@@ -401,12 +401,54 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#sensor-selection" class="md-nav__link">
-    Sensor Selection
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-of-team" class="md-nav__link">
+    Role of Team
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#pick-of-mircocontroller" class="md-nav__link">
+    Pick of Mircocontroller
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp32-s3-wroom-1-n4-pin-allocation" class="md-nav__link">
+    ESP32-S3-WROOM-1-N4 Pin Allocation
+  </a>
+  
+    <nav class="md-nav" aria-label="ESP32-S3-WROOM-1-N4 Pin Allocation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pinout-table" class="md-nav__link">
+    Pinout Table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-pin-count-estimation" class="md-nav__link">
+    Final Pin Count Estimation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#power-supply-regulation" class="md-nav__link">
@@ -419,6 +461,11 @@
   <a href="#rationale-for-selections" class="md-nav__link">
     Rationale for Selections
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -513,12 +560,54 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#sensor-selection" class="md-nav__link">
-    Sensor Selection
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-of-team" class="md-nav__link">
+    Role of Team
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#pick-of-mircocontroller" class="md-nav__link">
+    Pick of Mircocontroller
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp32-s3-wroom-1-n4-pin-allocation" class="md-nav__link">
+    ESP32-S3-WROOM-1-N4 Pin Allocation
+  </a>
+  
+    <nav class="md-nav" aria-label="ESP32-S3-WROOM-1-N4 Pin Allocation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pinout-table" class="md-nav__link">
+    Pinout Table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-pin-count-estimation" class="md-nav__link">
+    Final Pin Count Estimation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#power-supply-regulation" class="md-nav__link">
@@ -531,6 +620,11 @@
   <a href="#rationale-for-selections" class="md-nav__link">
     Rationale for Selections
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -561,8 +655,6 @@
   
   
 
-
-  <h1>ComponentSelection</h1>
 
 <h2 id="component-selection-report">Component Selection Report</h2>
 <h3 id="motor-selection">Motor Selection</h3>
@@ -648,7 +740,7 @@
 </thead>
 <tbody>
 <tr>
-<td>CY8C4248LYI-BL583</td>
+<td>PIC18F47Q10</td>
 <td>Built-in Bluetooth, supports UART</td>
 <td>Limited SPI/I2C channels</td>
 <td>$6</td>
@@ -663,34 +755,152 @@
 </tr>
 </tbody>
 </table>
-<h3 id="sensor-selection">Sensor Selection</h3>
+<h2 id="role-of-team">Role of Team</h2>
+<p>My primary responsibility is managing the motor and motor driver, ensuring precise control over the string's motion to produce different sound waves. I am also in charge of designing and constructing the physical structure, making sure it is sturdy, functional, and integrates well with the other components. For sensing, I focus on monitoring motor position and speed, possibly using encoders or current sensing. Actuation involves selecting and implementing the appropriate motor and driver to achieve smooth and consistent movement. In terms of display, I ensure that motor status and control feedback are visible. Power management is crucial, as the motor requires stable voltage and current to function efficiently without overloading the system.</p>
+<h2 id="pick-of-mircocontroller">Pick of Mircocontroller</h2>
+<p>The ESP32-S3-WROOM-1-N4 is the better choice for controlling a NEMA 17 stepper motor due to its higher processing power, built-in WiFi and Bluetooth, and strong software support. It offers flexible PWM outputs and timers for precise motor control, along with more RAM and Flash memory for expandability.</p>
+<h1 id="esp32-s3-wroom-1-n4-pin-allocation">ESP32-S3-WROOM-1-N4 Pin Allocation</h1>
+<h2 id="pinout-table">Pinout Table</h2>
 <table>
 <thead>
 <tr>
-<th>Sensor</th>
-<th>Pros</th>
-<th>Cons</th>
-<th>Cost</th>
-<th>Datasheet/Buy Link</th>
+<th><strong>Peripheral</strong></th>
+<th><strong>Pin(s)</strong></th>
+<th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>MPU6050 (IMU)</td>
-<td>Popular, widely documented, I2C support</td>
-<td>Older model, lower precision</td>
-<td>$4</td>
-<td><a href="https://www.invensense.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf">Datasheet</a></td>
+<td><strong>Power</strong></td>
+<td>2 (3V3)</td>
+<td>Main power supply (3.3V).</td>
 </tr>
 <tr>
-<td>BNO085 (IMU)</td>
-<td>High accuracy, fusion algorithms built-in</td>
-<td>More expensive, limited availability</td>
-<td>$10</td>
-<td><a href="https://www.ceva-dsp.com/wp-content/uploads/2019/07/BNO080_BNO085_Datasheet_v1.4.pdf">Datasheet</a></td>
+<td></td>
+<td>1 (GND)</td>
+<td>Ground connection.</td>
+</tr>
+<tr>
+<td><strong>UART</strong></td>
+<td>43 (GPIO43)</td>
+<td>UART0 TXD (Transmit Data).</td>
+</tr>
+<tr>
+<td></td>
+<td>44 (GPIO44)</td>
+<td>UART0 RXD (Receive Data).</td>
+</tr>
+<tr>
+<td><strong>SPI</strong></td>
+<td>36 (GPIO36)</td>
+<td>SPI_MISO (Master In Slave Out).</td>
+</tr>
+<tr>
+<td></td>
+<td>35 (GPIO35)</td>
+<td>SPI_MOSI (Master Out Slave In).</td>
+</tr>
+<tr>
+<td></td>
+<td>37 (GPIO37)</td>
+<td>SPI_CLK (Clock).</td>
+</tr>
+<tr>
+<td></td>
+<td>34 (GPIO34)</td>
+<td>SPI_CS (Chip Select).</td>
+</tr>
+<tr>
+<td><strong>SPI2</strong></td>
+<td>33 (GPIO36)</td>
+<td>SPI_MISO (Master In Slave Out).</td>
+</tr>
+<tr>
+<td></td>
+<td>32 (GPIO35)</td>
+<td>SPI_MOSI (Master Out Slave In).</td>
+</tr>
+<tr>
+<td></td>
+<td>31 (GPIO37)</td>
+<td>SPI_CLK (Clock).</td>
+</tr>
+<tr>
+<td></td>
+<td>30 (GPIO34)</td>
+<td>SPI_CS (Chip Select).</td>
+</tr>
+<tr>
+<td><strong>ADC</strong></td>
+<td>1 (GPIO1)</td>
+<td>ADC1 Channel 0.</td>
+</tr>
+<tr>
+<td><strong>DAC</strong></td>
+<td>17 (GPIO17)</td>
+<td>DAC1 output.</td>
+</tr>
+<tr>
+<td><strong>PWM</strong></td>
+<td>2 (GPIO2)</td>
+<td>PWM output</td>
+</tr>
+<tr>
+<td><strong>GPIO</strong></td>
+<td>3 (GPIO3)</td>
+<td>General-purpose input/output (Buttons, LEDs).</td>
 </tr>
 </tbody>
 </table>
+<h2 id="final-pin-count-estimation">Final Pin Count Estimation</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Category</strong></th>
+<th><strong>Estimated Pins</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SPI</strong> (MOSI, MISO, CLK, CS)</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>UART (TX, RX)</strong></td>
+<td>2</td>
+</tr>
+<tr>
+<td><strong>Power (3.3V, GND x2)</strong></td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Motor Driver (DIR, STEP, EN)</strong></td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>ADC (Optional)</strong></td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>DAC (Optional)</strong></td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>PWM (LEDs, Motor Speed)</strong></td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>GPIO (Buttons, Indicators)</strong></td>
+<td>2</td>
+</tr>
+<tr>
+<td><strong>Programming &amp; Debugging</strong></td>
+<td>2–4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reference">Reference</h2>
+<p>For more details, check the <a href="https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf">ESP32-S3-WROOM-1 datasheet</a>.</p>
 <h3 id="power-supply-regulation">Power Supply &amp; Regulation</h3>
 <table>
 <thead>
@@ -722,6 +932,7 @@
 <h3 id="rationale-for-selections">Rationale for Selections</h3>
 <ul>
 <li><strong>Motor Selection:</strong> NEMA 17 is chosen due to extensive documentation, ease of programming, and cost-effectiveness.</li>
+<li><strong>DRV8825 Stepper Motor Driver:</strong>  </li>
 <li><strong>Microcontroller:</strong> ESP32-S3 is selected due to its strong wireless capabilities and sufficient GPIOs for the project.</li>
 <li><strong>Sensor:</strong> BNO085 is optimal due to its accuracy and built-in fusion algorithms, reducing processing overhead.</li>
 <li><strong>Power Regulation:</strong> MP1584 is chosen for efficiency in voltage regulation, ensuring stable operation.</li>
