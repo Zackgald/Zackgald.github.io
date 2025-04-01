@@ -581,31 +581,36 @@
 <p>This page is to show messages and message types between team members</p>
 <p>Overall Example code: [AZ][SENDERID][RECEIVERID][MESSAGETYPE][VALUE][YB]</p>
 <h2 id="parts">Parts</h2>
-<p>[AZ]: This is the start of the message. This tells the the controller to start reading the message, all messages needs this to be read. </p>
+<p>[AZ]: This is the start of the message. This tells the the controller to start reading the message, all messages needs this to be read. NEEDS TO BE IN HEX (0x41)(0x5A)</p>
 <p>[SENDERID]: This helps others see who sent the message. </p>
 <table>
 <thead>
 <tr>
 <th>Teammates</th>
 <th>SENDER ID</th>
+<th>Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Zack</td>
 <td>Z</td>
+<td>Hex (0x5A)</td>
 </tr>
 <tr>
 <td>Brendan</td>
 <td>B</td>
+<td>Hex (0x42)</td>
 </tr>
 <tr>
 <td>Carter</td>
 <td>C</td>
+<td>Hex (0x43)</td>
 </tr>
 <tr>
 <td>Sivannee</td>
 <td>S</td>
+<td>Hex (0x53)</td>
 </tr>
 </tbody>
 </table>
@@ -615,24 +620,29 @@
 <tr>
 <th>Teammates</th>
 <th>RECEIVER ID</th>
+<th>Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Zack</td>
 <td>Z</td>
+<td>Hex (0x5A)</td>
 </tr>
 <tr>
 <td>Brendan</td>
 <td>B</td>
+<td>Hex (0x42)</td>
 </tr>
 <tr>
 <td>Carter</td>
 <td>C</td>
+<td>Hex (0x43)</td>
 </tr>
 <tr>
 <td>Sivannee</td>
 <td>S</td>
+<td>Hex (0x53)</td>
 </tr>
 </tbody>
 </table>
@@ -642,24 +652,29 @@
 <tr>
 <th>Message Types</th>
 <th>Values</th>
+<th>Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Motor Freq</td>
 <td>1</td>
+<td>0x31</td>
 </tr>
 <tr>
 <td>Wavelength</td>
 <td>2</td>
+<td>0x32</td>
 </tr>
 <tr>
 <td>Motor on/off</td>
 <td>3</td>
+<td>0x33</td>
 </tr>
 <tr>
 <td>NA</td>
 <td>4</td>
+<td>0x34</td>
 </tr>
 </tbody>
 </table>
@@ -669,32 +684,36 @@
 <tr>
 <th>Message Types</th>
 <th>Values</th>
+<th>Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Motor Freq</td>
-<td>0-256</td>
+<td>0-255</td>
+<td>0x30 - 0xFF</td>
 </tr>
 <tr>
 <td>Wavelength</td>
 <td>0-256</td>
+<td>0x30 - 0xFF</td>
 </tr>
 <tr>
 <td>Motor on/off</td>
 <td>0-1</td>
+<td>0x30-0x31</td>
 </tr>
 <tr>
 <td>NA</td>
 <td>4</td>
+<td>na</td>
 </tr>
 </tbody>
 </table>
+<p>[YB]: This is the end of the message. This tells the the controller to stop reading the message, all messages needs this to be read. NEEDS TO BE IN HEX (0x59)(0x42)</p>
 <h2 id="examples">Examples</h2>
-<p>AZCZ11FYB   // Motor Frequency, 1F (31 in decimal)
-AZCZ21EYB   // Wavelength, 1E (30 in decimal)
-AZCZ300YB   // Motor Off
-AZCZ301YB   // Motor On</p>
+<p>0x41 0x5A 0x43 0x5A 0x31 0x28 0x32 0x30 0x30 0x29 0x59 0x42   Carter sends Zack motor freq of 200 </p>
+<p>0x41 0x5A 0x5A 0x42 0x31 0x28 0x31 0x29 0x59 0x42   Zack sends Brendan motor is on</p>
 
 
 
