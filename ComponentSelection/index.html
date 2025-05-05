@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://embedded-systems-design.github.io/template_report/ComponentSelection/">
       
       
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../Individual%20Block%20Diagram/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -25,7 +29,7 @@
 
     
       
-        <title>ComponentSelection - ZACK GALD EGR314 Report SPRING2025</title>
+        <title>Component Selection - ZACK GALD EGR314 Report SPRING2025</title>
       
     
     
@@ -125,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ComponentSelection
+              Component Selection
             
           </span>
         </div>
@@ -257,17 +261,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
@@ -280,7 +286,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Design
@@ -291,9 +297,27 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../component_selection.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Component Selection
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -302,6 +326,149 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#component-selection-report" class="md-nav__link">
+    Component Selection Report
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-table-of-major-components" class="md-nav__link">
+    Summary Table of major components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-making-process" class="md-nav__link">
+    Decision Making Process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-budget-conclusion" class="md-nav__link">
+    Power Budget Conclusion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table" class="md-nav__link">
+    Table
+  </a>
+  
+    <nav class="md-nav" aria-label="Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motor-selection" class="md-nav__link">
+    Motor Selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor-driver-selection" class="md-nav__link">
+    Motor Driver Selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-supply-regulation" class="md-nav__link">
+    Power Supply &amp; Regulation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pinout-table" class="md-nav__link">
+    Pinout Table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-pin-count-estimation" class="md-nav__link">
+    Final Pin Count Estimation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rationale-for-selections" class="md-nav__link">
+    Rationale for Selections
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-pick-the-microcontroller" class="md-nav__link">
+    2) Pick the microcontroller
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pic-info" class="md-nav__link">
+    Pic Info
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-availability" class="md-nav__link">
+    Module Availability
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#team-role-and-responsibilities" class="md-nav__link">
+    Team Role and Responsibilities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-microcontroller-choice-and-rationale" class="md-nav__link">
+    Final Microcontroller Choice and Rationale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-power-budget" class="md-nav__link">
+    3) Power Budget
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -313,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../individual_block_diagram.md" class="md-nav__link">
+      <a href="../Individual%20Block%20Diagram/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -333,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../schematic_design.md" class="md-nav__link">
+      <a href="../Schematic%20Design/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -394,7 +561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bom.md" class="md-nav__link">
+      <a href="../BOM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -414,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api.md" class="md-nav__link">
+      <a href="../API/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -434,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../resources.md" class="md-nav__link">
+      <a href="../Resources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -622,7 +789,7 @@
   
 
 
-  <h1>ComponentSelection</h1>
+  <h1>Component Selection</h1>
 
 <h2 id="component-selection-report">Component Selection Report</h2>
 <h2 id="summary-table-of-major-components">Summary Table of major components</h2>
